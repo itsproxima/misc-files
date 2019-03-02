@@ -1,0 +1,690 @@
+/*
+Theme Name: Juthin
+Author: Aklima
+Author Url: justineaklima.com
+Version: 1.0
+Description: This is html5 template
+*/
+
+/**
+ *** CSS Indexing ***
+ * THEME DEFAULT CSS
+ * RESET CSS
+ * HEADER AREA CSS
+ * SLIDER AREA CSS
+ * ABOUT AREA CSS
+ * PORTFOLIO AREA CSS
+ * CONTACT AREA CSS
+ * FOOTER AREA CSS
+ * SCROLL TO TOP CSS
+ * PRELOADER CSS
+**/
+
+/*----------------------------------
+--------- THEME DEFAULT CSS --------
+----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
+body {
+    line-height: 25px;
+    font-size: 14px;
+    color: #888888;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+/*----------------------------
+---------- RESET CSS ---------
+----------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+	color: #222222;
+    line-height: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+h1 {
+    font-size: 55px;
+}
+h2 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 18px;
+}
+a {
+    transition: 0.4s;
+}
+a,
+a:hover {
+    color: #888888;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+iframe {
+    width: 100%;
+    border: none;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+button:focus {
+    text-decoration: none;
+    border: none;
+    outline: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ol {
+    margin-bottom: 0;
+}
+select:focus,
+select:active {
+    box-shadow: none;
+    border: 0;
+    outline: 0
+}
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+textarea {
+    background: transparent;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+	color: #888888;
+}
+input::-webkit-input-placeholder {
+    color: #888888;
+}
+textarea {
+    height: 120px;
+}
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.ptb-100 {
+    padding: 100px 0;
+}
+.mt-80 {
+	margin-top: 80px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.mb-50 {
+	margin-bottom: 50px;
+}
+.section-title h2 {
+    margin-bottom: 22px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 25px;
+}
+.section-title h2::before {
+    content: '';
+    border-bottom: 2px solid #1b1b1b;
+    border-left: 2px solid #1b1b1b;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+}
+.section-title h2::after {
+    content: '';
+    border-top: 2px solid #1b1b1b;
+    border-right: 2px solid #1b1b1b;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+}
+.theme-btn {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    padding: 6px 22px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.theme-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+.flexbox-center {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.display-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.display-tablecell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*------------------------------------
+-------- MENU AREA CSS START --------
+-------------------------------------*/
+.header-area {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background: #000;
+    padding: 10px 0;
+    color: #fff;
+    z-index: 9;
+}
+.mainmenu ul li {
+    display: inline-block;
+}
+
+.mainmenu {
+    text-align: right;
+}
+
+.mainmenu ul li a {
+    color: #fff;
+    margin-left: 15px;
+    position: relative;
+    padding: 10px 0;
+    display: inline-block;
+}
+a.nav-link {
+    position: relative;
+    padding: 10px 0;
+    display: inline-block;
+}
+a.nav-link::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    margin: auto;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    transition: 0.4s;
+    right: 0;
+}
+
+a.nav-link.active::before,
+a.nav-link:hover::before {
+    width: 10px;
+}
+.responsive-menu {
+    display: none;
+}
+.slicknav_nav {
+    background-color: #222222;
+    padding: 5px 12px;
+}
+.slicknav_nav li {
+    display: block;
+}
+.slicknav_nav li a i {
+	display: none;
+}
+.slicknav_nav a:hover, .slicknav_nav .slicknav_row:hover {
+    background: transparent;
+    color: #fff;
+}
+a.slicknav_item.slicknav_row {
+    display: inline-block;
+}
+.slicknav_btn {
+    margin: 0;
+    border-radius: 0;
+}
+.slicknav_menu {
+    background: transparent;
+}
+.toggle-pade {
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+/*--------------------------------------
+--------- MENU AREA CSS END ---------
+---------------------------------------*/
+
+/*--------------------------------------
+-------- SLIDER AREA CSS START --------
+---------------------------------------*/
+.hero-area {
+    background-image: url(../img/header.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: right top;
+    position: relative;
+    overflow: hidden;
+}
+.hero-area-content {
+    padding: 300px 0 280px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+}
+.hero-area-content h1 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.discover {
+    position: absolute;
+    bottom: 60px;
+    right: 8.333%;
+    transform: rotate(270deg);
+    text-transform: uppercase;
+    font-size: 10px;
+    z-index: 1;
+}
+.discover:before {
+    content: '\eb6b';
+    z-index: -1;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    font-family: icofont;
+    font-size: 24px;
+    color: #b1acac;
+    -webkit-animation: secdownmoving 1000ms linear 0s infinite;
+    -o-animation: secdownmoving 1000ms linear 0s infinite;
+    animation: secdownmoving 1000ms linear 0s infinite;
+    transform: rotate(90deg);
+}
+.discover a {
+    padding-left: 50px;
+}
+@keyframes secdownmoving{
+    0%{
+        left: 10px;
+    }
+    50%{
+        left: 20px;
+    }
+    100%{
+        left: 10px;
+    }
+}
+.discover a {
+    color: #fff;
+}
+.hero-area-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
+    transform: rotate(270deg);
+    max-height: 100px;
+    padding: 0 15px;
+}
+.hero-area-icon a {
+    display: inline-block;
+    margin: 0 5px;
+}
+.hero-area-icon::before {
+    position: absolute;
+    top: 13px;
+    left: 100%;
+    width: 120px;
+    background: #fff;
+    height: 1px;
+    content: "";
+}
+.hero-area-icon::after {
+    position: absolute;
+    top: 13px;
+    right: 100%;
+    width: 120px;
+    background: #fff;
+    height: 1px;
+    content: "";
+}
+
+/*--------------------------------------
+--------- SLIDER AREA CSS END ---------
+---------------------------------------*/
+
+/*--------------------------------------
+-------- ABOUT AREA CSS START --------
+---------------------------------------*/
+.about-box-img {
+    position: relative;
+    padding-left: 45px;
+    z-index: 1;
+}
+.about-img-gradient-box {
+    height: 95%;
+    width: 80%;
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    -o-transform: translateY(10%);
+    transform: translateY(10%);
+    position: absolute;
+    z-index: -1;
+    left: 5px;
+    bottom: 0;
+    display: block;
+    background: #6450dc;
+    background: -webkit-linear-gradient(left, #000 0%,#999 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#000),to(#999));
+    background: -o-linear-gradient(left, #000 0%,#999 100%);
+    background: linear-gradient(to right, #000 0%,#999 100%);
+}
+.single-about-box , .about-box-img {
+    margin-bottom: 30px;
+}
+.single-about-box {
+    padding-top: 5%;
+}
+.single-about-box img {
+    max-width: 100px;
+    display: block;
+    margin-bottom: 18px;
+}
+.single-about-box p {
+    margin-bottom: 15px;
+}
+#progress1,
+#progress4,
+#progress5,
+#progress2,
+#progress3 {
+    height: 6px;
+}
+.progress-value {
+    color: #000;
+    margin-bottom: 0;
+}
+.skill-item:last-child {
+    padding-bottom: 5px;
+}
+.skill-item {
+    padding-bottom: 20px;
+    padding-top: 14px;
+}
+.carousel-indicators {
+    text-align: left;
+    display: block;
+    margin: 0;
+    bottom: 0;
+}
+.carousel-indicators li {
+    text-indent: 0;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #000;
+    color: #000;
+    height: 5px;
+}
+.carousel-indicators .active {
+    background: #000;
+}
+#carouselExampleIndicators {
+    padding-bottom: 30px;
+}
+/*--------------------------------------
+--------- ABOUT AREA CSS END ---------
+---------------------------------------*/
+
+/*--------------------------------------
+-------- SERVICE AREA CSS START --------
+---------------------------------------*/
+.service-box {
+    transition: all 0.4s;
+    margin-top: 30px;
+    padding: 25px 30px;
+    box-shadow: 0 0 5px #ccc;
+}
+.service-icon {
+    padding: 28px 0;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+}
+.service-icon::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2px;
+    height: 20px;
+    background: #222;
+    content: "";
+}
+.service-icon::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2px;
+    height: 20px;
+    background: #222;
+    content: "";
+}
+.service-icon i {
+    width: 40px;
+    height: 45px;
+    display: inline-block;
+    line-height: 50px;
+    background: #222;
+    color: #ddd;
+    font-size: 22px;
+    transition: all 0.4s;
+    text-align: center;
+}
+.service-box:hover {
+    background: #eee;
+    box-shadow: none;
+}
+.service-info {
+    overflow: hidden;
+}
+.service-box h4 {
+    transition: all 0.4s;
+    margin: 0 0 10px;
+}
+/*--------------------------------------
+--------- SERVICE AREA CSS END ---------
+---------------------------------------*/
+
+/*--------------------------------------
+------- PORTFOLIO AREA CSS START --------
+---------------------------------------*/
+.portfolio-area {
+    background: #f1f1f1;
+}
+.single-portfolio-box {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    transition: all 0.4s;
+}
+.single-portfolio-box:hover {
+    opacity: 0.8;
+}
+.portfolio-project {
+    margin-top: 30px;
+}
+.portfolio-menu li {
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    color: #000;
+    cursor: pointer;
+}
+.portfolio-menu li:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    margin: auto;
+    background: #000;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    transition: 0.4s;
+    right: 0;
+}
+.portfolio-menu li.active:before,
+.portfolio-menu li:hover:before {
+    width: 10px;
+}
+.portfolio-menu {
+    text-align: center;
+    margin-top: 30px;
+}
+.portfolio-bg-1 {
+    background-image: url('../img/portfolio/portfolio1.jpg');
+}
+.portfolio-bg-2 {
+    background-image: url('../img/portfolio/portfolio2.jpg');
+}
+.portfolio-bg-3 {
+    background-image: url('../img/portfolio/portfolio3.jpg');
+}
+.portfolio-bg-4 {
+    background-image: url('../img/portfolio/portfolio4.jpg');
+}
+.portfolio-bg-5 {
+    background-image: url('../img/portfolio/portfolio5.jpg');
+}
+.portfolio-bg-6 {
+    background-image: url('../img/portfolio/portfolio6.jpg');
+}
+/*--------------------------------------
+--------- PORTFOLIO AREA CSS END --------
+---------------------------------------*/
+
+/*--------------------------------------
+-------- FOOTER AREA CSS START --------
+---------------------------------------*/
+.widget {
+    margin-top: 25px;
+}
+.widget h6 {
+    margin-bottom: 5px;
+}
+.widget p {
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+.widget p:last-child {
+    margin-bottom: 0;
+}
+.footer {
+    background: #000;
+    padding: 40px 0;
+    text-align: center;
+}
+.footer-content {
+    max-width: 400px;
+    margin: auto;
+}
+/*--------------------------------------
+--------- FOOTER AREA CSS END ---------
+---------------------------------------*/
+
+/*--------------------------------------
+-------- SCROLL-TO-TOP CSS START --------
+---------------------------------------*/
+.scrollToTop {
+    width: 35px;
+    display: none;
+    height: 35px;
+    line-height: 35px;
+    background: #000;
+    display: none;
+    color: #fff;
+    position: fixed;
+    border-radius: 2px;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+    text-align: center;
+    border: 1px solid #fff;
+}
+.scrollToTop:hover {
+    background: #111;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.scrollToTop:focus {
+    border: 1px solid #fff;
+    color: #fff;
+}
+/*--------------------------------------
+--------- SCROLL-TO-TOP CSS END ---------
+---------------------------------------*/
+
+/*--------------------------------------
+-------- Pre Loader Style START --------
+---------------------------------------*/
+#preloader {
+  position: fixed;
+  z-index: 99999999999;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  background: #fff url("../img/loader.gif") no-repeat center center;
+}
+/*--------------------------------------
+--------- Pre Loader Style END ---------
+---------------------------------------*/

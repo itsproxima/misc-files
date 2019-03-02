@@ -1,0 +1,21 @@
+<VirtualHost *:80>
+    ServerAdmin admin@itjack.co.uk
+    ServerName medical.com
+
+    DocumentRoot /var/www/html/medical
+
+    <Directory /var/www/html/medical/>
+        Options Indexes FollowSymLinks MultiViews   
+	AllowOverride All
+	Order allow,deny
+	allow from all 
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+
+https://en.wikibooks.org/wiki/PHP_Programming/Building_a_secure_user_login_system
+http://www.developerdrive.com/2013/05/adding-a-simple-authentication-using-php-require-and-includes/

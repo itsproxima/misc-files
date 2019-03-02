@@ -1,0 +1,810 @@
+body {
+  width:100%;
+  margin:0;
+  background:#000;
+}
+
+o-stage {
+  display:block;
+  position:relative;
+  margin:0 auto;
+  width:1920px;
+  height:1080px;
+  transform-origin:0 0;
+	overflow:hidden;
+}
+
+
+o-humanoid {
+  left:1250px;
+  top:700px;
+  transform:scale(.75);
+}
+
+o-humanoid,
+o-humanoid * {
+  display:block;
+  position:absolute;
+  z-index:0;
+  box-sizing:border-box;
+  background:linear-gradient(to right, rgb(0,0,0), rgb(21,41,101));
+  border-radius:100%;
+}
+
+o-humanoid o-hips {
+  top:-30px;
+  left:-50px;
+  width:60px;
+  height:60px;
+  border-radius:20px;
+  animation:.25s humanoid-hips alternate infinite ease-out;
+  animation-delay:.25s;
+}
+@keyframes humanoid-hips {
+  0% {
+    transform:translateY(0) rotate(-6deg);
+  }
+  100% {
+    transform:translateY(-125px) rotate(6deg);
+  }
+}
+
+o-humanoid w-upper-body {
+  top:-140px;
+  left:0px;
+  width:80px;
+  height:160px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 50px;
+  transform-origin:30px 140px;
+  animation:.25s humanoid-upper-body alternate infinite ease-in-out;
+  animation-delay:.3s;
+}
+o-humanoid o-upper-body {
+  top:-0px;
+  left:0px;
+  width:80px;
+  height:160px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 50px;
+}
+@keyframes humanoid-upper-body {
+  0% {
+    transform:rotate(10deg);
+  }
+  100% {
+    transform:rotate(-22.5deg);
+  }
+}
+
+o-humanoid o-neck {
+  top:-70px;
+  left:00px;
+  width:40px;
+  height:80px;
+  transform-origin:10px 90px;
+  animation:.25s humanoid-neck alternate infinite ease-in;
+  animation-delay:.1s;
+}
+@keyframes humanoid-neck {
+  0% {
+    transform:rotate(70deg);
+  }
+  100% {
+    transform:rotate(40deg);
+  }
+}
+
+o-humanoid o-head {
+  top:-50px;
+  left:-10px;
+  width:100px;
+  height:80px;
+  border-top-left-radius:30px;
+  border-top-left-radius:30px;
+  transform-origin:20px 60px;
+  animation:1s humanoid-head infinite ease-in-out;
+}
+@keyframes humanoid-head {
+  0% {
+    transform:rotate(-30deg);
+  }
+  25% {
+    transform:rotate(-65deg);
+  }
+  50% {
+    transform:rotate(-35deg);
+  }
+  75% {
+    transform:rotate(-50deg);
+  }
+  100% {
+    transform:rotate(-30deg);
+  }
+}
+o-humanoid o-head o-eye {
+  width:10px;
+  height:10px;
+  top:30px;
+  left:75px;
+  background:aqua;
+}
+o-humanoid o-head o-eye o-light-scale {
+  transform:scaleY(.5);
+}
+o-humanoid o-head o-eye o-visible-light {
+  top:5px;
+  left:-10px;
+  width:1000px;
+  height:1000px;
+  border-radius:0;
+  background:radial-gradient(farthest-corner at 0px 0px, rgba(150,255,255,.5), rgba(0,255,255,.5) 10%, rgba(0,0,0,0) 50%);
+  transform-origin:0 0;
+  transform:rotate(-45deg);
+  filter:blur(10px);
+  mix-blend-mode: lighten;
+  opacity:1;
+}
+
+/* ARMS */
+o-humanoid w-back-arm {
+  transform:scale(.95);
+}
+o-humanoid w-back-arm * {
+  background:linear-gradient(to right, rgb(0,0,0), rgb(11,21,51));
+}
+o-humanoid o-shoulder {
+  top:10px;
+  left:15px;
+  width:50px;
+  height:50px;
+  transform-origin:25px 25px;
+  animation:.25s humanoid-shoulder alternate infinite ease-out;
+  animation-delay:.25s;
+}
+@keyframes humanoid-shoulder {
+  0% {
+    transform:translateY(25px) rotate(-5deg);
+  }
+  100% {
+    transform:translateY(-25px) rotate(5deg);
+  }
+}
+
+o-humanoid o-upper-arm {
+  top:10px;
+  left:10px;
+  width:30px;
+  height:120px;
+  transform-origin:15px 15px;
+  animation:.5s humanoid-upper-arm infinite alternate ease-in-out;
+  animation-delay:.5s;
+}
+o-humanoid w-back-arm o-upper-arm {
+  animation-delay:0s;
+}
+@keyframes humanoid-upper-arm {
+  0% {
+    transform:rotate(112.5deg);
+  }
+  100% {
+    transform:rotate(-45deg);
+  }
+}
+
+o-humanoid o-under-arm {
+  top:100px;
+  left:0px;
+  width:30px;
+  height:120px;
+  transform-origin:15px 15px;
+  animation:.5s humanoid-under-arm alternate infinite ease-in-out;
+  animation-delay:.5s;
+}
+o-humanoid w-back-arm o-under-arm {
+  animation-delay:0s;
+}
+@keyframes humanoid-under-arm {
+  0% {
+    transform:rotate(-67.5deg);
+  }
+  100% {
+    transform:rotate(-112.5deg);
+  }
+}
+
+o-humanoid o-hand {
+  top:110px;
+  left:-5px;
+  width:40px;
+  height:30px;
+  transform-origin:10px 20px;
+  animation:.5s humanoid-hand alternate infinite ease-in-out;
+}
+o-humanoid w-back-arm o-hand {
+  animation-delay:1.5s;
+}
+@keyframes humanoid-hand {
+  0% {
+    transform:rotate(-45deg);
+  }
+  100% {
+    transform:rotate(45deg);
+  }
+}
+
+o-humanoid o-fingers {
+  top:20px;
+  left:-10px;
+  width:30px;
+  height:40px;
+  background:linear-gradient(to bottom, rgb(0,0,0) 50%, rgb(255,200,50));
+}
+
+/*  LEGS */
+o-humanoid w-back-leg {
+  transform:scale(.95);
+  z-index:-2;
+}
+o-humanoid w-back-leg * {
+  background:linear-gradient(to right, rgb(0,0,0), rgb(11,21,51));
+}
+o-humanoid o-thigh {
+  top:40px;
+  left:10px;
+  width:60px;
+  height:160px;
+  transform-origin:30px 30px;
+  animation:2s humanoid-thigh infinite ease-in-out;
+}
+o-humanoid w-back-leg o-thigh {
+  animation-delay:.45s;
+}
+@keyframes humanoid-thigh {
+  0% {
+    transform:rotate(45deg);
+  }
+  25% {
+    transform:rotate(-65deg);
+  }
+  50% {
+    transform:rotate(37deg);
+  }
+  75% {
+    transform:rotate(-52deg);
+  }
+  100% {
+    transform:rotate(45deg);
+  }
+}
+
+o-humanoid o-calf {
+  top:130px;
+  left:10px;
+  width:40px;
+  height:160px;
+  transform-origin:20px 20px;
+  animation:.5s humanoid-calf infinite alternate ease-in-out;
+  animation-delay:.75s;
+}
+o-humanoid w-back-leg o-calf {
+  animation-delay:1.25s;
+}
+@keyframes humanoid-calf {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(112.5deg);
+  }
+}
+
+o-humanoid o-heel {
+  top:150px;
+  left:0px;
+  width:30px;
+  height:30px;
+  animation:.5s humanoid-heel alternate infinite;
+  animation-delay:.5s;
+  background:linear-gradient(to bottom, rgb(25,12,0), rgb(255,200,50));
+}
+o-humanoid w-back-leg o-heel {
+  animation-delay:0s;
+}
+@keyframes humanoid-heel {
+  0% {
+    transform:rotate(-45deg);
+  }
+  100% {
+    transform:rotate(45deg);
+  }
+}
+
+o-humanoid o-foot {
+  top:20px;
+  left:10px;
+  width:60px;
+  height:10px;
+}
+
+o-humanoid o-toes {
+  left:50px;
+  width:30px;
+  height:10px;
+  background:linear-gradient(to right, rgb(150,100,0), rgb(255,200,50));
+  transform-origin:5px 5px;
+  animation:.5s humanoid-toes alternate infinite;
+  animation-delay:.5s;
+}
+o-humanoid w-back-leg o-toes {
+  animation-delay:0s;
+}
+@keyframes humanoid-toes {
+  0% {
+    transform:rotate(-45.5deg);
+  }
+  100% {
+    transform:rotate(45.5deg);
+  }
+}
+
+w-dogo {
+	top:700px;
+	left:430px;
+}
+
+o-dogo {
+	animation:.5s dogo-jump alternate infinite ease-out;
+	animation-delay:.85s;
+}
+@keyframes dogo-jump {
+	0% {
+		transform:translateY(0px);
+	}
+	100% {
+		transform:translateY(-150px) rotate(11.25deg);
+	}
+}
+
+w-dogo,
+o-dogo,
+o-dogo * {
+	display:block;
+	position:absolute;
+	z-index:0;
+	box-sizing:border-box;
+	/* background:linear-gradient(to right, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%; */
+	/* outline:1px dotted red; */
+}
+
+o-dogo o-hips {
+	top:-25px;
+	left:-25px;
+	width:50px;
+	height:50px;
+	background:linear-gradient(to bottom, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+	animation:.5s dogo-hips alternate infinite ease-in-out;
+	animation-delay:-.1s;
+}
+@keyframes dogo-hips {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(25deg);
+	}
+}
+
+o-dogo o-middle-body {
+	top:-5px;
+	left:25px;
+	width:130px;
+	height:70px;
+	background:linear-gradient(to bottom, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	transform-origin:10px 10px;
+	animation:.5s dogo-middle-body alternate infinite ease-in-out;
+	animation-delay:-.2s;
+}
+@keyframes dogo-middle-body {
+	0% {
+		transform:rotate(-20deg);
+	}
+	100% {
+		transform:rotate(15deg);
+	}
+}
+
+o-dogo w-upper-body {
+	top:-5px;
+	left:90px;
+	width:100px;
+	height:100px;
+	transform-origin:20px 20px;
+	animation:.5s dogo-upper-body alternate infinite ease-in-out;
+	animation-delay:.15s;
+}
+@keyframes dogo-upper-body {
+	0% {
+		transform:rotate(20deg);
+	}
+	100% {
+		transform:rotate(-20deg);
+	}
+}
+
+o-dogo o-upper-body {
+	width:100px;
+	height:80px;
+	background:linear-gradient(to bottom, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+	border-top-right-radius:60px;
+	border-bottom-right-radius:60px;
+	transform:rotate(-22.5deg);
+}
+
+o-dogo w-front-arm * {
+	background:linear-gradient(to right, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+}
+o-dogo w-back-arm {
+	transform:scale(.95);
+}
+o-dogo w-back-arm * {
+	background:linear-gradient(to right, rgb(0,0,0), rgb(51,21,11));
+	border-radius:100%;
+}
+
+o-dogo o-shoulder {
+	top:10px;
+	left:30px;
+	width:50px;
+	height:50px;
+
+	border-radius:100%;
+	animation:.5s dogo-shoulder alternate infinite ease-in-out;
+	animation-delay:.4s;
+}
+@keyframes dogo-shoulder {
+	0% {
+		transform:translateY(-20px);
+	}
+	100% {
+		transform:translateY(5px);
+	}
+}
+
+o-dogo o-upper-arm {
+	top:0px;
+	left:5px;
+	width:40px;
+	height:100px;
+	transform-origin:20px 20px;
+	animation:.5s dogo-upper-arm infinite alternate ease-in-out;
+	animation-delay:.2s;
+}
+o-dogo w-front-arm o-upper-arm {
+	animation-delay:.3s;
+}
+@keyframes dogo-upper-arm {
+	0% {
+		transform:rotate(-90deg);
+	}
+	100% {
+		transform:rotate(90deg);
+	}
+}
+
+o-dogo o-under-arm {
+	top:90px;
+	left:5px;
+	width:30px;
+	height:100px;
+	transform-origin:10px 10px;
+	animation:.5s dogo-under-arm infinite alternate ease-in-out;
+	animation-delay:.8s;
+}
+o-dogo w-front-arm o-under-arm {
+	animation-delay:.9s;
+}
+@keyframes dogo-under-arm {
+	0% {
+		transform:rotate(-135deg);
+	}
+	100% {
+		transform:rotate(0deg);
+	}
+}
+
+o-dogo o-front-paw {
+	top:90px;
+	left:5px;
+	width:20px;
+	height:60px;
+	transform-origin:5px 10px;
+	animation:.5s dogo-front-paw alternate infinite ease-in-out;
+	animation-delay:.7s;
+}
+o-dogo w-front-arm o-front-paw {
+	animation-delay:.8s;
+}
+@keyframes dogo-front-paw {
+	0% {
+		transform:rotate(145deg);
+	}
+	100% {
+		transform:rotate(-45deg);
+	}
+}
+
+o-dogo o-front-toes {
+	top:50px;
+	left:5px;
+	width:15px;
+	height:30px;
+	background:linear-gradient(to bottom, rgb(0,0,0) 50%, rgb(255,0,0));
+	transform-origin:5px 10px;
+	animation:.5s dogo-front-toes alternate infinite;
+	animation-delay:.7s;
+}
+o-dogo w-front-arm o-front-toes {
+	animation-delay:.8s;
+}
+@keyframes dogo-front-toes {
+	0% {
+		transform:rotate(45deg);
+	}
+	100% {
+		transform:rotate(-45deg);
+	}
+}
+
+o-dogo o-neck {
+	top:0px;
+	left:70px;
+	width:70px;
+	height:50px;
+	background:linear-gradient(to bottom, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+	transform-origin:15px 15px;
+	animation:.5s dogo-neck alternate infinite ease-in-out;
+}
+@keyframes dogo-neck {
+	0% {
+		transform:rotate(20deg);
+	}
+	100% {
+		transform:rotate(-20deg);
+	}
+}
+
+o-dogo o-head {
+	top:-10px;
+	left:50px;
+	width:90px;
+	height:70px;
+	background:linear-gradient(to right, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+	border-bottom-right-radius:20px;
+	border-top-left-radius:20px;
+	transform-origin:20px 20px;
+	animation:.5s dogo-head alternate infinite ease-in-out;
+	animation-delay:.25s;
+}
+@keyframes dogo-head {
+	0% {
+		transform:rotate(-60deg);
+	}
+	100% {
+		transform:rotate(30deg);
+	}
+}
+
+o-dogo o-head o-eye {
+	width:10px;
+	height:10px;
+	top:30px;
+	left:50px;
+	background:red;
+	border-radius:100%;
+	border-bottom-right-radius:3px;
+	border-top-left-radius:3px;
+}
+o-dogo o-head o-eye o-light-scale {
+	transform:scaleY(.5);
+}
+o-dogo o-head o-eye o-visible-light {
+	top:5px;
+	left:-10px;
+	width:1000px;
+	height:1000px;
+	border-radius:0;
+	background:radial-gradient(farthest-corner at 0px 0px, rgba(255,10,100,.5), rgba(255,0,0,.5) 10%, rgba(0,0,0,0) 50%);
+	transform-origin:0 0;
+	transform:rotate(-45deg);
+	filter:blur(10px);
+	mix-blend-mode: lighten;
+	opacity:1;
+}
+
+o-dogo w-front-leg * {
+	background:linear-gradient(to right, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+}
+o-dogo w-back-leg {
+	transform:scale(.95);
+}
+o-dogo w-back-leg * {
+	background:linear-gradient(to right, rgb(0,0,0), rgb(51,21,11));
+	border-radius:100%;
+}
+
+o-dogo o-thigh {
+	top:10px;
+	left:-10px;
+	width:70px;
+	height:100px;
+	transform-origin:35px 20px;
+	animation:.5s dogo-thigh alternate infinite ease-in-out;
+}
+o-dogo w-back-leg o-thigh {
+	animation-delay:.1s;
+}
+@keyframes dogo-thigh {
+	0% {
+		transform:rotate(67.5deg);
+	}
+	100% {
+		transform:rotate(-85deg);
+	}
+}
+
+o-dogo o-calf {
+	left:20px;
+	top:80px;
+	width:30px;
+	height:100px;
+	transform-origin:15px 15px;
+	animation:.5s dogo-calf alternate infinite ease-in-out;
+	animation-delay:.4s;
+}
+o-dogo w-back-leg o-calf {
+	animation-delay:.5s;
+}
+@keyframes dogo-calf {
+	0% {
+		transform:rotate(135deg);
+	}
+	100% {
+		transform:rotate(0deg);
+	}
+}
+
+o-dogo o-back-paw {
+	top:90px;
+	left:5px;
+	width:20px;
+	height:60px;
+	transform-origin:10px 10px;
+	animation:.5s dogo-back-paw alternate infinite ease-in-out;
+	animation-delay:.45s;
+}
+o-dogo w-back-leg o-back-paw {
+	animation-delay:.55s;
+}
+@keyframes dogo-back-paw {
+	0% {
+		transform:rotate(-112.5deg);
+	}
+	100% {
+		transform:rotate(0deg);
+	}
+}
+
+o-dogo o-back-toes {
+	top:50px;
+	left:5px;
+	width:10px;
+	height:30px;
+	background:linear-gradient(to bottom, rgb(0,0,0) 50%, rgb(255,0,0));
+	transform-origin:5px 5px;
+	animation:.5s dogo-back-toes alternate infinite ease-in-out;
+	animation-delay:.45s;
+}
+o-dogo w-back-leg o-back-toes {
+	animation-delay:.55s;
+}
+@keyframes dogo-back-toes {
+	0% {
+		transform:rotate(-90deg);
+	}
+	100% {
+		transform:rotate(67.5deg);
+	}
+}
+
+o-dogo w-tail {
+	top:10px;
+	left:10px;
+}
+o-dogo w-tail * {
+	background:linear-gradient(to bottom, rgb(0,0,0), rgb(101,41,21));
+	border-radius:100%;
+}
+
+o-dogo o-tail-1 {
+	top:-10px;
+	left:-90px;
+	width:100px;
+	height:20px;
+	transform-origin:90px 10px;
+	animation:.5s dogo-tail-1 alternate infinite ease-in-out;
+	animation-delay:.25s;
+}
+@keyframes dogo-tail-1 {
+	0% {
+		transform:rotate(-40deg);
+	}
+	100% {
+		transform:rotate(0deg);
+	}
+}
+
+o-dogo o-tail-2 {
+	top:0px;
+	left:-40px;
+	width:50px;
+	height:15px;
+	transform-origin:42.5px 7.5px;
+	animation:.5s dogo-tail-2 alternate infinite ease-in-out;
+	animation-delay:.3s;
+}
+@keyframes dogo-tail-2 {
+	0% {
+		transform:rotate(40deg);
+	}
+	100% {
+		transform:rotate(30deg);
+	}
+}
+
+o-dogo o-tail-3 {
+	top:0px;
+	left:-40px;
+	width:50px;
+	height:10px;
+	transform-origin:45px 5px;
+	animation:.5s dogo-tail-3 alternate infinite ease-in-out;
+	animation-delay:.35s;
+}
+@keyframes dogo-tail-3 {
+	0% {
+		transform:rotate(30deg);
+	}
+	100% {
+		transform:rotate(20deg);
+	}
+}
+
+o-dogo o-tail-4 {
+	top:0px;
+	left:-20px;
+	width:30px;
+	height:5px;
+	background:linear-gradient(to left, rgb(0,0,0) 50%, rgb(255,0,0));
+	transform-origin:27.5px 2.5px;
+	animation:.5s dogo-tail-4 alternate infinite ease-in-out;
+	animation-delay:.4s;
+}
+@keyframes dogo-tail-4 {
+	0% {
+		transform:rotate(20deg);
+	}
+	100% {
+		transform:rotate(10deg);
+	}
+}

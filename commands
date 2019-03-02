@@ -1,0 +1,39 @@
+cd /var/www/html/bumpandbabes
+sudo chown -R itjack_proxi:webuser .
+find . -type f -exec chmod 664 {} \;
+find . -type d -exec chmod 775 {} \;
+chmod 550 mage 
+
+
+sudo gedit /etc/hosts
+sudo gedit /etc/apache2/sites-available/mybumpandbabes.com.conf 
+sudo a2ensite riscaff.com.conf 
+sudo service apache2 reload
+ping riscaff.com
+cd /var/www/html/riscaff/
+sudo chown -R itjack:webuser .
+find . -type f -exec chmod 664 {} \;
+find . -type d -exec chmod 775 {} \;
+
+
+
+
+
+
+----------------------start gogs-------------------
+sudo /opt/gogs/gogs web -p 6000
+
+
+
+sudo service network-manager restart
+
+
+-----------------------start cloud9------------------
+cd Downloads/Editor/c9sdk/
+node server.js -p 8080 -w /var/www/html/bumpandbabes -l 0.0.0.0 -a :
+
+
+see port in use
+ lsof -i TCP:8000 | grep LISTEN
+kill -9 pid
+

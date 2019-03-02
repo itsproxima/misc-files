@@ -1,0 +1,133 @@
+@media only screen and (max-width: 991px){
+	.service-box {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-box-img {
+        max-width: 450px;
+        margin: 0 auto 60px;
+    }
+    .hero-area-content {
+        padding: 170px 0 120px;
+        text-align: left;
+        padding-left: 40px;
+    }
+    .hero-area-icon::before,.hero-area-icon::after {
+        width: 50px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .hero-area-icon a {
+        margin: 0;
+    }
+    .hero-area-icon {
+        top: 45px;
+    }
+    .mt-80 {
+        margin-top: 30px;
+    }
+	.ptb-100 {
+		padding: 80px 0;
+	}
+	.portfolio-menu {
+		margin-top: 10px;
+	}
+}
+@media only screen and (max-width: 767px){
+	.mainmenu {
+		display: none;
+	}
+	.responsive-menu,
+	.slicknav_menu {
+		display: block;
+	}
+	ul.slicknav_nav {
+        position: absolute;
+        background: #000;
+        right: 15px;
+        top: 100%;
+        z-index: 9;
+        border: 1px solid #fff;
+        padding: 10px;
+        min-width: 170px;
+    }
+	.slicknav_menu .slicknav_menutxt {
+		display: none;
+	}
+	.slicknav_menu .slicknav_icon {
+		margin: 0;
+	}
+	.slicknav_nav a:hover {
+		background: transparent;
+		border-radius: 0;
+		color: #fff;
+	}
+	.slicknav_btn {
+		background-color: transparent;
+	}
+	.slicknav_nav .slicknav_row, .slicknav_nav a {
+		padding: 0;
+		margin: 5px 0;
+	}
+    .slicknav_nav a {
+        padding: 5px 0;
+    }
+	.menubar li a {
+		padding: 0;
+	}
+	.slicknav_nav ul {
+		margin: 0 0 0 5px;
+	}
+    .logo {
+        max-width: 100px;
+    }
+    .single-portfolio-box {
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 576px){
+	.discover {
+        right: -25px;
+    }
+    .hero-area-content h1 {
+        font-size: 22px;
+    }
+    .hero-area-content {
+        padding: 140px 0 100px;
+    }
+    .hero-area-icon {
+        display: none;
+    }
+    .hero-area {
+        background-position: right -90px top;
+    }
+    .section-title h2 {
+        font-size: 22px;
+        padding: 5px 15px;
+    }
+    .portfolio-menu li {
+        padding: 5px;
+		font-size: 13px;
+    }
+	.footer-area .section-title h2 {
+		margin-bottom: 10px;
+	}
+    .service-box {
+        padding: 15px 20px;
+    }
+    .ptb-100 {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    #carouselExampleIndicators {
+        display: none;
+    }
+    .mt-80 {
+        margin-top: 0;
+    }
+}
+@media only screen and (max-width: 480px){
+	
+}
